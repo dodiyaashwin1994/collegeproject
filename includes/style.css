@@ -1,0 +1,179 @@
+body {margin:0;font-family: "Segoe UI",Arial,sans-serif; font-size: 14px; line-height: 1.42857143; color: #333;}
+.container{margin:0; }
+.header {margin:0 auto; padding:0px 150px 0px 150px; width: auto; background: #8BBB4B; position:fixed;z-index:20; top: 0; left: 0; right: 0;}
+.header .logo {padding:0; margin:0; width:auto; float: left;padding-top:12px;}
+
+.logo a .logo-title {font-size:28px;font-weight:600;background:url("icons/logo-icon.png") no-repeat transparent; overflow:hidden; width:auto; padding-left: 35px; line-height: 0.9; height: 40px; color: #000;margin: 0 auto;}
+.logo a {text-decoration:none;}
+h1,h2,h3{ font-weight: 400;  letter-spacing: .02em; height:auto;}
+
+.menu { padding: 50px 150px 10px 150px;
+        overflow: hidden;
+        text-align: center;}
+
+.sub-menu { padding: 10px 150px 10px 150px;
+                overflow: hidden;
+                text-align: center;}
+
+ul.topnav {
+  width: auto;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    padding:10px 0px;
+  }
+
+ul.topnav li {
+
+  background: #8BBB4B;
+  border-radius: 4px;
+  width: 30%;
+  padding: 0;
+  margin:0;
+  margin: 10px 5px;
+  min-height: 100px;
+  max-height: 100px;
+  line-height: 120px;
+  display: inline-block;
+}
+
+ul.topnav li a {
+  display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #000;
+    font-family: "Segoe UI",Arial,sans-serif;
+    width:100%;
+    max-height: 100px;
+    overflow:hidden;
+}
+
+ul.topnav li a:hover {
+      color: #fff;
+      border-radius: 4px;
+      max-height: 100px;
+    }
+
+.topnav .spot { background: url("icons/home.png") no-repeat 50% 20% transparent;}
+.topnav .pnr { background: url("icons/pnr.png") no-repeat 50% 20%  transparent;}
+.topnav .fare { background: url("icons/fare.png") no-repeat 50% 20% transparent;}
+.topnav .time { background: url("icons/time.png") no-repeat 50% 20% transparent;}
+.topnav .seat { background: url("icons/seat.png") no-repeat 50% 20% transparent;}
+.topnav .tbstn { background: url("icons/tbstn.png") no-repeat 50% 20% transparent;}
+
+.topnav .spot:hover {
+   background: url("icons/home-hover.png") no-repeat 50% 20% transparent;
+   background-color: #8BBB4B;
+}
+.topnav .pnr:hover {
+   background: url("icons/pnr-hover.png") no-repeat 50% 20% transparent;
+    background-color: #8BBB4B;
+}
+.topnav .fare:hover {
+   background: url("icons/fare-hover.png") no-repeat 50% 20% transparent;
+    background-color: #8BBB4B;
+}
+.topnav .seat:hover {
+   background: url("icons/seat-hover.png") no-repeat 50% 20% transparent;
+    background-color: #8BBB4B;
+}
+.topnav .time:hover {
+   background: url("icons/time-hover.png") no-repeat 50% 20% transparent;
+    background-color: #8BBB4B;
+}
+.topnav .tbstn:hover {
+   background: url("icons/tbstn-hover.png") no-repeat 50% 20% transparent;
+    background-color: #8BBB4B;
+}
+
+footer {display:block; margin:0px auto; width: 100%; background-color: #5f5f5f; clear: left; padding:10px 0px 10px 0px; height: 100px; text-align:center; overflow:hidden;}
+
+footer ul {text-align:center; font-size: 17px; letter-spacing:1px; color:#f1f1f1; font-family: "Segoe UI",Arial,sans-serif; padding: 0px 20px 0px 20px; }
+footer ul li{list-style-type: :none;display: inline-block; padding:0px 0px 0px 10px;}
+footer ul li a{padding: 0;; margin:0;}
+footer .copywrite {color:#fff !important; font-size:12px;}
+.content,.result-box { height:auto; width:auto; clear:left; margin:0 auto;text-align:center;overflow:hidden;}
+.content{padding:50px 150px 0px 150px;}
+.content h1 {font-size:24px; text-align:center;}
+
+.content .input-box { margin:20px 100px 40px 100px; height:auto; text-align:center; border:1px solid #ededed; padding:30px 10px; background:#f2f2f2;}
+.input-box .input-area{margin:auto; display:inline-block; width:28%; padding:10px 5px;}
+input, select { width:100%;  border-radius:2px; font-size: 18px; height: 40px; border: 1px solid #cccccc;}
+
+
+.input-label{text-align:left; font-size: 18px}
+.submit-btn{background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;}
+ .submit-btn:hover {
+ background-color: #fff;
+ border:2px solid #4CAF50;
+ color:#000;
+ }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+table.seat {
+  width: 40%;
+    /* align-self: center; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border:1px solid #f2f2f2;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.result-box {padding:10px 150px 20px 150px;}
+.result-display {padding:10px;margin:0;text-align:center;font-size:18px!important;}
+.result-box h3 {font-weight: 400;letter-spacing: .02em; height: auto;margin:0; padding:0;}
+
+
+
+
+@media screen and (max-width:680px) {
+
+  .header {padding: 0;position: relative; width:100%;overflow:hidden;}
+  .header .logo {width: 100%; align-items: center;text-align: center; }
+  .logo a .logo-title {width: 60%; padding-left: 30px;}
+  .menu, .sub-menu {padding:10px 0px;}
+  ul.topnav {width: 100%; padding:0;margin:0;}
+  ul.topnav li {
+    width: 45%;
+}
+ul.topnav li a { overflow:hidden; letter-spacing: 0px;}
+
+  div.img {width:90%; margin:10px 10px 0px 15px;}
+
+  ul.topnav.responsive li a:hover {
+   color: #fff;
+   border-radius: 0px;
+}
+  .content {padding: 5px 15px 25px 15px;}
+  .content h1 {font-size: 18px !important;}
+  .content .input-box {margin: 0;height: auto;padding: 10px;}
+  .input-box .input-area { margin: auto; display: block; width: auto; padding: 10px 5px; overflow: hidden;}
+  table.seat {
+    width: 80%;}
+  .result-box {padding:0 0 10px 0;}
+  .result-table {overflow-x:auto;}
+  .mob-hdn {display:none;}
+
+}
