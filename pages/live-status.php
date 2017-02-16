@@ -117,7 +117,7 @@ else {
 }
 
 ?>
-<!-- menu html code--->
+<!-- menu html code-->
 <div class="sub-menu">
 <ul class="topnav">
   <li><a class="spot" href="national-train-enquiry-system">spot your train</a></li>
