@@ -1,6 +1,6 @@
 <div class="content">
         <h1>Spot Your Train</h1>
-<!- form to input various variables using POST METHOD--->
+
         <form method="POST">
         <div class="input-box">
                <div class="input-area">
