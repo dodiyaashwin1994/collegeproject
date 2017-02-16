@@ -93,7 +93,9 @@ if ($decode['response_code'] == 200)
 {
     echo "<div class='result-box'>";
     echo "<div class='result-display'>";
+        /*prints train number, train name */
         echo "<h3>".$decode['train_number']." - ".$decode['train_name']." Seat availibiltiy check </h3>";
+        /*prints train class searched and class code */
         echo "Class ".$decode['class']['class_name']." (".$decode['class']['class_code'].")";
     echo "</div>";
 
@@ -108,7 +110,9 @@ if ($decode['response_code'] == 200)
     foreach ($decode['availability'] as $data)
      {
         echo "<tr>";
+               /*prints date */
              echo "<td>".$data['date']."</td>";
+              /*prints status*/
              echo "<td>".$data['status']."</td>";
        echo "</tr>";
      }
@@ -119,7 +123,7 @@ if ($decode['response_code'] == 200)
 echo "</div>";
 
 }
-
+/*if API doesn't works*/
 elseif($decode['response_code'] == 204) {
    echo "<div class='result-box'>";
     echo "<div class='result-display'>";
@@ -128,6 +132,7 @@ elseif($decode['response_code'] == 204) {
     echo "</div>";
 }
 
+/*if user doesn't provide correct values*/
 else {
    echo $decode['error'];echo "<div class='result-box'>";
     echo "<div class='result-display'>";
