@@ -40,11 +40,16 @@
 
  if(isset($_POST['submit']))
 {
+/* variable for train number and intialized with POST method from above form*/         
 $trainnum=mysqli_real_escape_string($conn, $_POST['trainnum']);
 
+/* variable for journey date and intialized with POST method from above form*/     
 $jrnydate=mysqli_real_escape_string($conn, $_POST['jrnydate']);
 
+/*$file fetch data from api in json format*/
 $file=file_get_contents("INSERT_YOUR_API_URL_TO_FETCH_DATA_FROM_SERVER");
+         
+/* stores decoded value of $file variable in array*/         
 $decode=json_decode($file,true);
 
 if ($decode['response_code'] == 200)
@@ -68,7 +73,8 @@ if ($decode['response_code'] == 200)
                echo "<th>Act.arr / Act.dep</th>";
                echo "<th>Late(min)</th>";
             echo "</tr>";
-
+        
+     /* foreach loop echo's stored data in $decode variable*/
     foreach ($decode['route'] as $data)
      {
         echo "<tr>";
@@ -120,16 +126,4 @@ else {
   <li><a class="seat" href="seat-availability">Seat Availability</a></li>
   <li><a class="tbstn" href="trains-between-stations">Trains Between Stations</a></li>
 </ul>
-</div>
-<div class='result-display'>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- spot your train -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8648217255727755"
-     data-ad-slot="6815713627"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </div>
