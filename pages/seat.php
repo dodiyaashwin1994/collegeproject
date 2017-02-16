@@ -1,6 +1,6 @@
 <div class="content">
         <h1>Indian Railways Seat Availability in Trains</h1>
-
+<!-- form to input various variables using POST METHOD -->
         <form method="POST">
         <div class="input-box">
                <div class="input-area">
@@ -65,19 +65,28 @@
 
  if(isset($_POST['submit']))
 {
+/* variable for train number and intialized with POST method from above form*/          
 $trainnum=mysqli_real_escape_string($conn, $_POST['trainnum']);
 
+/* variable for journey date and intialized with POST method from above form*/   
 $jrnydate=mysqli_real_escape_string($conn, $_POST['jrnydate']);
 
+/* variable for source station code and intialized with POST method from above form*/   
 $srcstn=mysqli_real_escape_string($conn, $_POST['srcstn']);
 
+/* variable for destination station code and intialized with POST method from above form*/   
 $desstn=mysqli_real_escape_string($conn, $_POST['desstn']);
 
+/* variable for coach class and intialized with POST method from above form*/   
 $class=mysqli_real_escape_string($conn, $_POST['class']);
 
+/* variable for newdate and convert jrnydate in d-m-Y format*/   
 $newDate = date("d-m-Y", strtotime($jrnydate));
 
+/*$file fetch data from api in json format*/
 $file=file_get_contents("INSERT_YOUR_API_URL_TO_FETCH_DATA_FROM_SERVER");
+         
+/* stores decoded value of $file variable in array*/ 
 $decode=json_decode($file,true);
 
 if ($decode['response_code'] == 200)
@@ -94,7 +103,8 @@ if ($decode['response_code'] == 200)
                echo "<th >Date</th>";
                echo "<th>Availability</th>";
             echo "</tr>";
-
+        
+     /* foreach loop echo's stored data in $decode variable*/
     foreach ($decode['availability'] as $data)
      {
         echo "<tr>";
@@ -128,6 +138,7 @@ else {
 
 }
 ?>
+<!-- menu html code-->
 <div class="sub-menu">
   <ul class="topnav">
     <li><a class="spot" href="national-train-enquiry-system">spot your train</a></li>
