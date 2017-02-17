@@ -9,9 +9,13 @@
     <h1><?php echo $tno." ".$tname; ?></h1>
 </div>
  <?php
-
+/* variable for train number and intialized with POST method from above form*/ 
  $trainnum=mysqli_real_escape_string($conn, $tno);
+  
+ /*$file fetch data from api in json format*/
  $file=file_get_contents("INSERT_YOUR_API_URL_TO_FETCH_DATA_FROM_SERVER");
+  
+ /* stores decoded value of $file variable in array*/ 
  $decode=json_decode($file,true);
 
  if ($decode['response_code'] == 200)
@@ -29,7 +33,9 @@
                 echo "<th>Sch.Dep</th>";
 
              echo "</tr>";
-
+   
+   
+     /* foreach loop echo's stored data in $decode variable*/
      foreach ($decode['route'] as $data)
       {
          echo "<tr>";
