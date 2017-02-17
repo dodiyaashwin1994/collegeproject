@@ -5,7 +5,10 @@
         <div class="input-box">
                <div class="input-area">
                    <div class="input-label"><label>Enter Train Number</label></div>
+                   <!-- $trainname input variables  --> 
                    <div class="input-filed"><input type="text" name="trainnum" placeholder="enter train number" class="num" required> </div>
+                   
+                   <!-- $trainname input variables  --> 
                    <script>
                    $( function() {
                                  $( ".num" ).autocomplete({
@@ -17,7 +20,10 @@
 
                <div class="input-area">
                     <div class="input-label"> <label>Source Station</label></div>
+                       <!-- $srcstn input variables  --> 
                     <div class="input-filed"><input type="text" name="srcstn" class="stn" placeholder="enter station name or code" required></div>
+                    
+                    <!-- Script for station name and code auto complete using stnsearch.php-->   
                     <script>
                     $(function() {
                                   $( ".stn" ).autocomplete({
@@ -29,16 +35,19 @@
 
                <div class="input-area">
                     <div class="input-label"> <label>Destination Station</label></div>
+                     <!-- $desstn input variables  --> 
                     <div class="input-filed"><input type="text" name="desstn" class="stn" placeholder="enter station name or code" required></div>
                </div>
 
                <div class="input-area">
                     <div class="input-label"> <label>DOJ</label></div>
+                      <!-- $jrnydate input variables  -->   
                     <div class="input-filed"><input type="date" name="jrnydate" required></div>
                </div>
 
                <div class="input-area">
                     <div class="input-label"> <label>Select Journey Class</label></div>
+                       <!-- $class input variables  --> 
                     <div class="input-filed">
                        <select name="class">
                                  <option value="1A" >AC First Class (1A)</option>
