@@ -8,7 +8,7 @@
                    <!-- $trainname input variables  --> 
                    <div class="input-filed"><input type="text" name="trainnum" placeholder="enter train number" class="num" required> </div>
                    
-                   <!-- $trainname input variables  --> 
+                   <!--script fot  train ane and number auto complete using trainsearch.php  --> 
                    <script>
                    $( function() {
                                  $( ".num" ).autocomplete({
