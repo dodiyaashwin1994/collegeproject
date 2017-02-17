@@ -5,8 +5,11 @@
         <div class="input-box">
                <div class="input-area">
                    <div class="input-label"><label>Enter Train Number</label></div>
+                    <!-- $trainname input variables  -->   
                    <div class="input-filed"><input type="text" name="trainnum" placeholder="enter train number" class="tnum" required> </div>
-                   <script>
+                   
+                    <!-- Script for train name and number auto complete using trainsearch.php-->
+                    <script>
                    $(function() {
                                  $( ".tnum" ).autocomplete({
                                    source: 'trainsearch.php', minLength:3
@@ -17,6 +20,7 @@
 
                <div class="input-area">
                     <div class="input-label"> <label>Select Journey Date</label></div>
+                    <!-- $jrnydate input variables  --> 
                     <div class="input-filed">
                        <select name="jrnydate">
                                  <option value="<?php echo date("Ymd", strtotime('-2 days'));?>" >Day before Yesterday</option>
