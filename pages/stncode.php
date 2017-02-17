@@ -6,7 +6,10 @@
 
                <div class="input-area">
                     <div class="input-label"> <label>Enter station name</label></div>
+                        <!-- $srcstn input variables  --> 
                     <div class="input-filed"><input type="text" name="srcstn" class="stn" placeholder="enter station name or code" required></div>
+                    
+                    <!-- Script for station name and code auto complete using stnsearch.php--> 
                     <script>
                     $(function() {
                                   $( ".stn" ).autocomplete({
@@ -27,9 +30,15 @@
 <?php
 if(isset($_POST['submit']))
 {
+/* variable for source station and intialized with POST method from above form*/  
 $srcstn=mysqli_real_escape_string($conn, $_POST['srcstn']);
+
+/*s sql query to fetch data from database in array format*/
 $s = ("SELECT stncode, stnname FROM station WHERE stncode LIKE '%{$srcstn}%' or stnname LIKE '%{$srcstn}%'");
+        
+/* stores value of $s in array*/
 $sql=$conn->query($s);
+   
   echo "<div class='result-box'>";
 echo "<div class='result-table'>";
       echo "<table class='seat'>";
@@ -37,7 +46,7 @@ echo "<div class='result-table'>";
            echo "<th>Stn Code</th>";
            echo "<th>Stn Name</th>";
         echo "</tr>";
-
+/* foreach loop echo's stored data in $sql variable*/
 while ($row = $sql->fetch_assoc()) {
 
           echo "<tr>";
