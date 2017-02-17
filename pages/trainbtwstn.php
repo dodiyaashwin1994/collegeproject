@@ -1,12 +1,15 @@
 <div class="content">
         <h1>Trains between stations</h1>
-
+        <!-- form to input various variables using POST METHOD -->
         <form method="POST">
         <div class="input-box">
 
                <div class="input-area">
                     <div class="input-label"> <label>Source Station</label></div>
+                    <!-- $srcstn input variables  --> 
                     <div class="input-filed"><input type="text" name="srcstn" class="stn" placeholder="enter station name or code" required></div>
+                    
+                    <!-- Script for station name and code auto complete using stnsearch.php-->
                     <script>
                     $(function() {
                                   $( ".stn" ).autocomplete({
@@ -18,11 +21,13 @@
 
                <div class="input-area">
                     <div class="input-label"> <label>Destination Station</label></div>
+                     <!-- $desstn input variables  --> 
                     <div class="input-filed"><input type="text" name="desstn" class="stn" placeholder="enter station name or code" required></div>
                </div>
 
                <div class="input-area">
                     <div class="input-label"> <label>Date of Journey</label></div>
+                     <!-- $jrnydate input variables  --> 
                     <div class="input-filed"><input type="date" name="jrnydate" required></div>
                </div>
 
@@ -38,11 +43,22 @@
 
  if(isset($_POST['submit']))
 {
+/* variable for source station code and intialized with POST method from above form*/   
 $srcstn=mysqli_real_escape_string($conn, $_POST['srcstn']);
+         
+/* variable for destination station code and intialized with POST method from above form*/  
 $desstn=mysqli_real_escape_string($conn, $_POST['desstn']);
+
+/* variable for journey date and intialized with POST method from above form*/ 
 $jrnydate=mysqli_real_escape_string($conn, $_POST['jrnydate']);
+    
+/* variable for newdate and convert jrnydate in d-m-Y format*/  
 $newDate = date("d-m", strtotime($jrnydate));
+         
+/*$file fetch data from api in json format*/  
 $file=file_get_contents("INSERT_YOUR_API_URL_TO_FETCH_DATA_FROM_SERVER");
+         
+/* stores decoded value of $file variable in array*/        
 $decode=json_decode($file,true);
 
 if ($decode['response_code'] == 200)
@@ -64,7 +80,8 @@ if ($decode['response_code'] == 200)
                echo "<th>Arr.</th>";
                echo "<th>Travel Time</th>";
             echo "</tr>";
-
+    
+    /* foreach loop echo's stored data in $decode variable*/
     foreach ($decode['train'] as $data)
      {
         echo "<tr>";
