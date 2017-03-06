@@ -50,7 +50,7 @@ $sql1="CREATE TABLE IF NOT EXISTS `$trainnum` (
 
 $query1=mysqli_query($conn,$sql1);
 // query to fetch data of $trainnum from api
-$file=file_get_contents("http://api.railwayapi.com/route/train/$trainnum/apikey/qhk507gq/");
+$file=file_get_contents("API Url");
 $decode=json_decode($file,true);
 if ($decode['response_code'] == 200)
 {
