@@ -6,3 +6,7 @@ For user convenience we have also added services like pnr status, train between 
 we are futhure looking forward to make train enquiry more user friendly and easy navigation.
 
 we will send automated sms or email notification every hour for their registered trains enquiry. tis will help user get informed about their train every hour.
+
+
+vipashyana updated link:
+https://github.com/vipashyana/collegeproject/blob/final-update/update.php
