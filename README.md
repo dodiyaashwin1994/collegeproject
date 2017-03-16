@@ -1,4 +1,5 @@
 # collegeproject
+this project has been developed in core PHP language and needs Apache server to run.
 spot your train is an online train running status web app.
 User needs to provide train number and date of journey to track train status.
 Spot your train main aim is to provide user Train running status throughout there journey on thier mobile phone using Short message service or email notification.
